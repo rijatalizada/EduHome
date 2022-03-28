@@ -1,0 +1,22 @@
+@model List<HomeFooterSlider>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-8 offset-lg-2">
+        <div class="single-testimonial">
+            <div class="testimonial-info">
+                <div class="testimonial-img">
+                    <img src="~/assets/img/testimonial/@item.Image" alt="testimonial">
+                </div>
+                <div class="testimonial-content">
+                    <p>@item.Desc</p>
+                    <h4>@item.Name</h4>
+                    <h5>@item.AcademicDegree, @item.Faculty</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+}

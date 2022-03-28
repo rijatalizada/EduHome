@@ -1,0 +1,12 @@
+@model List<HomeNoticePage>
+@{
+    Layout = null;
+}
+@foreach (var item in Model)
+                            {
+                                <div class="single-notice-left mb-25 pb-25">
+                                    <h4>@item.PostDate.ToString("dd, MMM yyyy")</h4>
+                                    <p>@Html.Raw(item.Description) </p>
+                                </div>
+                            }
+                            

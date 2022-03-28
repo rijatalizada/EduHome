@@ -1,0 +1,57 @@
+@model List<HomeNoticePage>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Posts List</h4>
+                        <div class="table-responsive pt-3">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            id
+                                        </th>
+                                        <th>
+                                            PostDate
+                                        </th>
+                                        
+                                        <th>
+                                            <a class="btn btn-success" asp-controller="NoticeBoard" asp-action="Create">Create</a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var notice in Model)
+                                    {
+                                        <tr class="table-dark">
+                                            <td>
+                                                @notice.Id
+                                            </td>
+                                            <td>
+                                                @notice.PostDate.ToString("dd, MMM yyyy")
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-controller="NoticeBoard" asp-action="Detail" asp-route-id="@notice.Id">Detail</a>
+                                                <a class="btn btn-warning" asp-controller="NoticeBoard" asp-action="Update" asp-route-id="@notice.Id">Update</a>
+                                                <a class="btn btn-danger" id="DeleteCat" asp-controller="NoticeBoard" asp-action="Delete" asp-route-id="@notice.Id">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+@model List<Teacher>
+
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="single-teacher mb-45"> 
+            <div class="single-teacher-img">
+                <a asp-controller="Teacher" asp-action="Detail" asp-route-id="@item.Id"><img src="~/assets/img/teacher/@item.Image" alt="teacher"></a>
+            </div>
+            <div class="single-teacher-content text-center">
+                <h2><a asp-controller="Teacher" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a></h2>
+                <h4>@item.AcademicRanking</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
+                    <li><a href="https://www.pinterest.com/devitemsllc/"><i class="zmdi zmdi-pinterest"></i></a></li>
+                    <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
+                    <li><a href="https://twitter.com/devitemsllc"><i class="zmdi zmdi-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}

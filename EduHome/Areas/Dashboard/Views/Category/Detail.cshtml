@@ -1,0 +1,57 @@
+@model Category
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Course : @Model.Name</h4>
+                    
+                        <p>
+                            Category Count : @Model.Count
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Related Events: </h4>
+                        <ul>
+                            @if (Model.EventCategories.Count == 0)
+                            {
+                                <li>There are no related Events</li>
+                            }
+                            else
+                            {
+                                @foreach (var item in Model.EventCategories)
+                                {
+                                    <li>@item.Category.Name</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Related Courses: </h4>
+                        <ul>
+                            @if (Model.CourseCategories.Count == 0)
+                            {
+                                <li>There are no related Courses</li>
+                            }
+                            else
+                            {
+                                @foreach (var item in Model.CourseCategories)
+                                {
+                                    <li>@item.Category.Name</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
