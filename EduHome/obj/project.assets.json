@@ -9613,11 +9613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ricatalizade/Desktop/EduHome/EduHome/EduHome.csproj",
+      "projectUniqueName": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/EduHome.csproj",
       "projectName": "EduHome",
-      "projectPath": "/Users/ricatalizade/Desktop/EduHome/EduHome/EduHome.csproj",
+      "projectPath": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/EduHome.csproj",
       "packagesPath": "/Users/ricatalizade/.nuget/packages/",
-      "outputPath": "/Users/ricatalizade/Desktop/EduHome/EduHome/obj/",
+      "outputPath": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ricatalizade/.nuget/NuGet/NuGet.Config"

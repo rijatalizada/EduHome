@@ -1,19 +1,15 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EduHome.Models;
+namespace EduHome.Areas.Dashboard.ViewModels;
 
-public class HeaderSlider
+public class HeaderMultipleSlidersVM
 {
-    public int Id { get; set; }
-    public string Image { get; set; }
     [Required(ErrorMessage = "Please Enter Title")]
     public string Title { get; set; }
     [Required(ErrorMessage = "Please Enter SubTitle")]
     public string TitleH2 { get; set; }
     [Required]
     public string Description { get; set; }
-    [Required]
-    public byte? Order { get; set; }  
     
+    public IFormFile[] Images { get; set; }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PC1Fv2kRvvhGWph3IpBuNpd8S3Kt0SdkziqURV/r32sj0XcBK1Mz2BARNssL1IVhpJkp8V2W1YZbfqV2GT9wgg==",
+  "dgSpecHash": "Cr0opgDECRZHzZS91yXAzK/87W+xzY+7WuGDv7W4Ywpg8D6GXcwB0s7+uwssvGDBi2zx2X7CxupUOrtcBd8m1Q==",
   "success": true,
-  "projectFilePath": "/Users/ricatalizade/Desktop/EduHome/EduHome/EduHome.csproj",
+  "projectFilePath": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/EduHome.csproj",
   "expectedPackageFiles": [
     "/Users/ricatalizade/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/ricatalizade/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

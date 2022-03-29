@@ -1,17 +1,18 @@
-@model HeaderSliderVM
+@model HeaderMultipleSlidersVM
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Create new Category</h4>
-                        <form class="forms-sample" method="post" asp-controller="HomeHeaderSlider" asp-action="Create" enctype="multipart/form-data">
+                        <h4 class="card-title">Create Multiple Sliders</h4>
+                        <form class="forms-sample" method="post" asp-controller="HomeHeaderSlider" asp-action="CreateMultiple" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Title</label>
                                 <input asp-for="Title" class="form-control" placeholder="Title">
@@ -28,14 +29,9 @@
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Order</label>
-                                <input asp-for="Order" class="form-control" placeholder="Order">
-                                <span asp-validation-for="Order" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label>Image</label>
-                                <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image">
-                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                <label>Images</label>
+                                <input asp-for="Images" class="form-control" placeholder="Images"/>
+                                <span asp-validation-for="Images" class="text-danger"></span>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Submit</button>
                             <button class="btn btn-light" asp-controller="HomeHeaderSlider" asp-action="Index">Cancel</button>
@@ -47,3 +43,23 @@
     </div>
 </div>
 
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .catch(error => {
+                console.error(error);
+            });
+        ClassicEditor
+                    .create(document.querySelector('#Title'))
+                    .catch(error => {
+                        console.error(error);
+               });
+        ClassicEditor
+                    .create(document.querySelector('#TitleH2'))
+                    .catch(error => {
+                        console.error(error);
+                    });
+    </script>
+}
