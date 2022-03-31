@@ -34,26 +34,7 @@
 
         <!-- Header Area Start -->
 		<header class="top">
-		    <div class="header-top">
-		        <div class="container">
-		            <div class="row">
-		                <div class="col-md-8 col-sm-8">
-		                    <div class="header-top-left">
-		                        <p>HAVE ANY QUESTION ?  +880 5698  598  6587</p>
-		                    </div>
-		                </div>
-		                <div class="col-md-4 col-sm-4">
-		                    <div class="header-top-right text-md-end text-center">
-		                        <ul>
-		                            <li><a href="~/assets/login.html">login</a></li>
-		                            <li><a href="~/assets/signup.html">signup</a></li>
-		                        </ul>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-			<div class="header-area two header-sticky">
+            <div class="header-area two header-sticky">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-sm-5 col-6">
@@ -74,7 +55,14 @@
                                             <li class="hidden-sm"><a asp-controller="Teacher" asp-action="Index">teacher</a></li>
                                             <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                                             <li><a href="~/assets/contact.html">Contact</a></li>
-                                            <li><a href="~/assets/contact.html">Buy Now</a>
+                                            <li>@if (!User.Identity.IsAuthenticated)
+                                                {
+                                                    <a asp-controller="Account" asp-action="Login">Sign In</a>
+                                                }
+                                                else
+                                                {
+                                                    <a asp-controller="Account" asp-action="SignOut">Sign Out</a>
+                                                }</li>
                                         </ul>
                                     </nav>
                                 </div>

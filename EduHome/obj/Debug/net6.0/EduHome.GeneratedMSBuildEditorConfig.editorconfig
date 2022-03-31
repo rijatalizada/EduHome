@@ -59,6 +59,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0hvbWVIZWFkZXJTbGlkZXIvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/HomeHeaderSlider/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0hvbWVIZWFkZXJTbGlkZXIvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/NoticeBoard/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL05vdGljZUJvYXJkL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,6 +85,42 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1NoYXJlZC9fTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Rlc3RpbW9uaWFsL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Rlc3RpbW9uaWFsL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Rlc3RpbW9uaWFsL0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Rlc3RpbW9uaWFsL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1Rlc3RpbW9uaWFsL1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/User/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1VzZXIvQWRkUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/User/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1VzZXIvQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/User/GetRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1VzZXIvR2V0Um9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1VzZXIvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/_ViewImports.cshtml]

@@ -36,5 +36,6 @@ public class Course
     public Assessment Assessment { get; set; }
     public List<CourseCategory> CourseCategories { get; set; }
     public List<CourseLanguage> CourseLanguages { get; set; }
+    public List<Comment> Comments { get; set; }
 
 }

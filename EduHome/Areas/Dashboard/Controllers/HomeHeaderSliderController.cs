@@ -6,12 +6,15 @@ using EduHome.ImageFolder;
 using EduHome.Models;
 using EduHome.Utils;
 using EduHome.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.Areas.Dashboard.Controllers;
 
 [Area("Dashboard")]
+[Authorize(Roles = RoleConstants.Admin + "," + RoleConstants.Moderator)]
+
 public class HomeHeaderSliderController : Controller
 {
     private readonly AppDbContext _context;
@@ -34,7 +37,46 @@ public class HomeHeaderSliderController : Controller
         var slider = await _context.HeaderSliders.FindAsync(id);
         return View(slider);
     }
-    
+
+    public IActionResult Update(int id)
+    {
+        var slider = _context.HeaderSliders.Find(id);
+        return View(slider);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Update(int id, HeaderSlider slider)
+    {
+        bool isExist = await _context.HeaderSliders.AnyAsync(c => c.Id == id);
+        if (!isExist) return NotFound();
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
+        var sliderToUpdate = await _context.HeaderSliders.FindAsync(id);
+        if (sliderToUpdate == null) return NotFound();
+
+        if (slider.ImageFile != null)
+        {
+            FileUtils.DeleteFile(Path.Combine(_env.WebRootPath, FileConstants.ImagePath, FolderPath.Slider, sliderToUpdate.Image));
+            var newImage = FileUtils.CreateFile(FileConstants.ImagePath, FolderPath.Slider, slider.ImageFile);
+            sliderToUpdate.Image = newImage;
+        }
+        
+        
+        sliderToUpdate.Title = slider.Title;
+        sliderToUpdate.TitleH2 = slider.TitleH2;
+        sliderToUpdate.Description = slider.Description;
+        sliderToUpdate.Order = slider.Order;
+        
+        _context.HeaderSliders.Update(sliderToUpdate);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+
     public IActionResult Create()
     {
         return View();

@@ -1,11 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EduHome.ViewModels;
 
 public class HeaderSliderVM
 {
-    
+
     [Required(ErrorMessage = "Please Enter Title")]
     public string Title { get; set; }
     [Required(ErrorMessage = "Please Enter SubTitle")]

@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EduHome.Models;
 
-public class HomeFooterSlider
+public class Testimonial
 {
     public int Id { get; set; }
     
@@ -21,4 +22,6 @@ public class HomeFooterSlider
     public string Faculty { get; set; }
     [Required]
     public int Order { get; set; }
+    [NotMapped]
+    public IFormFile? ImageFile { get; set; }
 }

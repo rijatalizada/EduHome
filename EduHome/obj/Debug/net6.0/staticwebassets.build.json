@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZJZpV0hBztJcrybZH6BkC8v8/EYpM/u45tYRC94VQ9M=",
+  "Hash": "WmCBXrwdk+HmtfjRrdBh3yIJ+k6Hg0trlDk0m/z7NqQ=",
   "Source": "EduHome",
   "BasePath": "_content/EduHome",
   "Mode": "Default",
@@ -3077,23 +3077,6 @@
       "OriginalItemSpec": "wwwroot/assets/img/post/post3.jpg"
     },
     {
-      "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/slider/48767aee-cbeb-43d8-a6ec-d9d31d956b0fphoto-1503676260728-1c00da094a0b.jpeg",
-      "SourceId": "EduHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/",
-      "BasePath": "_content/EduHome",
-      "RelativePath": "assets/img/slider/48767aee-cbeb-43d8-a6ec-d9d31d956b0fphoto-1503676260728-1c00da094a0b.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/img/slider/48767aee-cbeb-43d8-a6ec-d9d31d956b0fphoto-1503676260728-1c00da094a0b.jpeg"
-    },
-    {
       "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/slider/home.png",
       "SourceId": "EduHome",
       "SourceType": "Discovered",
@@ -3383,6 +3366,40 @@
       "OriginalItemSpec": "wwwroot/assets/img/teacher/teacher9.jpg"
     },
     {
+      "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/testimonial/.DS_Store",
+      "SourceId": "EduHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/",
+      "BasePath": "_content/EduHome",
+      "RelativePath": "assets/img/testimonial/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/testimonial/.DS_Store"
+    },
+    {
+      "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/testimonial/6b3bc596-ce16-472b-bf65-6c76dca12394testimonial3.jpg",
+      "SourceId": "EduHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/",
+      "BasePath": "_content/EduHome",
+      "RelativePath": "assets/img/testimonial/6b3bc596-ce16-472b-bf65-6c76dca12394testimonial3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/testimonial/6b3bc596-ce16-472b-bf65-6c76dca12394testimonial3.jpg"
+    },
+    {
       "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/testimonial/testimonial-bg.jpg",
       "SourceId": "EduHome",
       "SourceType": "Discovered",
@@ -3415,6 +3432,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/img/testimonial/testimonial.jpg"
+    },
+    {
+      "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/img/testimonial/testimonial2.jpg",
+      "SourceId": "EduHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/",
+      "BasePath": "_content/EduHome",
+      "RelativePath": "assets/img/testimonial/testimonial2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/testimonial/testimonial2.jpg"
     },
     {
       "Identity": "/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/wwwroot/assets/js/ajax-mail.js",

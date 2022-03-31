@@ -59,7 +59,13 @@
                                             <li class="hidden-sm"><a asp-controller="Teacher" asp-action="Index">teacher</a></li>
                                             <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                                             <li><a href="~/assets/contact.html">Contact</a></li>
-                                            <li><a href="~/assets/contact.html">Buy Now</a>
+                                            @if (!User.Identity.IsAuthenticated)
+                                            {
+                                                <a asp-controller="Account" asp-action="Login">Sign In</a>
+                                            }else
+                                            {
+                                                <a asp-controller="Account" asp-action="SignOut">Sign Out</a>
+                                            }
                                         </ul>
                                     </nav>
                                 </div>

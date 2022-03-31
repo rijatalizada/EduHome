@@ -11,8 +11,11 @@ using System.Threading.Tasks;
 using EduHome.Constants;
 using EduHome.DAL;
 using EduHome.Models;
+using EduHome.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MailKit.Net.Smtp;
+using MailKit.Security;
 using Microsoft.Extensions.Options;
 
 namespace EduHome 
@@ -31,14 +34,22 @@ namespace EduHome
         // This method gets called by the runtime. Use this method to add services to the container. 
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllersWithViews();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+            
             services.AddIdentity<User, IdentityRole>(options =>
             {
-                options.Password.RequiredLength = 6;
+                options.Password.RequiredLength = 5;
                 options.User.RequireUniqueEmail = true;
                 options.SignIn.RequireConfirmedEmail = true;
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+
+            services.AddScoped<IMailService, MailService>();
+            
+            services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
@@ -62,11 +73,12 @@ namespace EduHome
             } 
  
             app.UseHttpsRedirection(); 
-            app.UseStaticFiles(); 
- 
+            app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseRouting(); 
  
-            app.UseAuthorization(); 
+            app.UseAuthorization();
+            
  
             app.UseEndpoints(endpoints => 
             { 

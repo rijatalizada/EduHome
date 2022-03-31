@@ -14,7 +14,7 @@ public class TestimonialViewComponent : ViewComponent
     
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        var homeFooterSlider = await _context.HomeFooterSliders.OrderBy(hfs=>hfs.Order).ToListAsync();
+        var homeFooterSlider = await _context.Testimonials.OrderBy(hfs=>hfs.Order).ToListAsync();
         return View(homeFooterSlider);
     }   
 }

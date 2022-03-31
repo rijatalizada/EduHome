@@ -1,4 +1,5 @@
 using EduHome.Models;
+using EduHome.ViewModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,7 +27,8 @@ public class AppDbContext : IdentityDbContext<User>
     public DbSet<TeacherCategory> TeacherCategories { get; set; }
     public DbSet<Event> Events { get; set; }
     public DbSet<EventCategory> EventCategories { get; set; }
-    public DbSet<HomeFooterSlider> HomeFooterSliders { get; set; }
+    public DbSet<Testimonial> Testimonials { get; set; }
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<BlogCategory> BlogCategories { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 }

@@ -1,6 +1,8 @@
+using EduHome.Constants;
 using EduHome.DAL;
 using EduHome.Models;
 using EduHome.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +11,8 @@ namespace EduHome.Areas.Dashboard.Controllers;
 
 
 [Area("Dashboard")]
+[Authorize(Roles = RoleConstants.Admin + "," + RoleConstants.Moderator)]
+
 public class NoticeBoardController : Controller
 {
     private readonly AppDbContext _context;

@@ -528,3 +528,6 @@
 /Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/obj/Debug/net6.0/EduHome.pdb
 /Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/obj/Debug/net6.0/EduHome.genruntimeconfig.cache
 /Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/obj/Debug/net6.0/ref/EduHome.dll
+/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/bin/Debug/net6.0/MailKit.dll
+/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/bin/Debug/net6.0/MimeKit.dll
+/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/bin/Debug/net6.0/BouncyCastle.Crypto.dll

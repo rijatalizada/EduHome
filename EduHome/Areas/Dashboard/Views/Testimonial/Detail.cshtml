@@ -1,0 +1,25 @@
+@model Testimonial
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <a asp-action="Index" asp-controller="Testimonial" class="btn btn-primary">Back</a>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Name : @Model.Name</h4>
+                        <h4 class="card-title">Faculty : @Model.Faculty</h4>
+                        <h4 class="card-title">Description : @Model.Desc</h4>
+                        <h4 class="card-title">Image : <img src="~/assets/img/testimonial/@Model.Image" alt="@Model.Image" style="width: 200px; height: 200px"/></h4>
+                        <p>Order : @Model.Order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

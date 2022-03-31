@@ -7,6 +7,7 @@
 
 <div class="main-panel">
     <div class="content-wrapper">
+        <a asp-action="Index" asp-controller="HomeHeaderSlider" class="btn btn-primary">Back</a>
         <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
@@ -16,7 +17,7 @@
                         <h4 class="card-title">Description : @Model.Description</h4>
                         <h4 class="card-title">Image : <img src="~/assets/img/slider/@Model.Image" alt="@Model.Image" style="width: 200px; height: 200px"/></h4>
                         <p>
-                            Order : @Model.Order 
+                            Order : @Model.Order
                         </p>
                     </div>
                 </div>

@@ -18,4 +18,5 @@ public class Blog
     public DateTime Date { get; set; }
 
     public List<BlogCategory> BlogCategories { get; set; }
+    public List<Comment> Comments { get; set; }
 }

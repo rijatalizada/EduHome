@@ -16,4 +16,7 @@ public class HeaderSlider
     [Required]
     public byte? Order { get; set; }  
     
+    [NotMapped]
+    public IFormFile? ImageFile { get; set; }
+    
 }
