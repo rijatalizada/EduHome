@@ -1,0 +1,44 @@
+@model Blog
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <a asp-action="Index" class="btn btn-primary mb-2 tex-white">Back</a>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@Model.Name </h3>
+                        
+                        <p class="mt-2">About: <strong>@Model.About</strong></p>
+                        
+                        <p class="mt-2">
+                            Date : @Model.Date.ToString("dd, MMM yyyy")
+                        </p>
+                        <p class="mt-2">Author : @Model.Author    </p>
+
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Related Categories:</h4>
+                        <ul>
+                            @foreach (var category in Model.BlogCategories)
+                            {
+                                <li>@category.Category.Name</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Image:</h4>
+                        <img src="~/assets/img/blog/@Model.Image" alt="@Model.Name" class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

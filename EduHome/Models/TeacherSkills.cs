@@ -11,5 +11,5 @@ public class TeacherSkills
     public int Design { get; set; }
     public int TeacherId { get; set; }
     
-    public Teacher Teacher { get; set; }
+    public Teacher? Teacher { get; set; }
 }

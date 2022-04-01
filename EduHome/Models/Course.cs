@@ -25,15 +25,18 @@ public class Course
     [Required]
     public int Duration { get; set; }
     [Required]
-    public int? ClassDuration { get; set; }
+    public int ClassDuration { get; set; }
     [Required]
-    public int? Fee { get; set; }
+    public int Fee { get; set; }
     [Required]
     public int Students { get; set; }
     public int SkillLevelId { get; set; }
     public SkillLevel SkillLevel { get; set; }
     public int AssessmentId { get; set; }
     public Assessment Assessment { get; set; }
+    
+
+
     public List<CourseCategory> CourseCategories { get; set; }
     public List<CourseLanguage> CourseLanguages { get; set; }
     public List<Comment> Comments { get; set; }

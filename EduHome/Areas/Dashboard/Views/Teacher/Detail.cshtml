@@ -1,0 +1,67 @@
+@model Teacher
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <a asp-action="Index" class="btn btn-primary mb-2 tex-white">Back</a>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@Model.Name </h3>
+                        
+                        <p>About: <span>@Model.About</span></p>
+                        
+                        <p>
+                            Academic Rank : @Model.AcademicRanking
+                        </p>
+
+                        <p>
+                            Degree : @Model.Degree.Name
+                        </p>
+                        <p>Experience : @Model.Experience years</p>
+
+                        <p>Hobbies : @Model.Hobbies</p>
+
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Related Categories:</h4>
+                        <ul>
+                            @foreach (var category in Model.TeacherCategories)
+                            {
+                                <li>@category.Category.Name</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                           <h4 class="card-title">Skills:</h4>
+                           <ul>
+                               <li>Communication: @Model.TeacherSkills.Communication%</li>
+                               <li>Design: @Model.TeacherSkills.Design%</li>
+                               <li>Development: @Model.TeacherSkills.Development%</li>
+                               <li>Innovation: @Model.TeacherSkills.Innovation%</li>
+                               <li>Language: @Model.TeacherSkills.Language%</li>
+                               <li>TeamLeader: @Model.TeacherSkills.TeamLeader%</li>
+                           </ul>
+                       </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Image:</h4>
+                        <img src="~/assets/img/teacher/@Model.Image" alt="@Model.Name" class="img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                        <h4>Contact:</h4>
+                        <p>Mail : @Model.Mail</p>
+                        <p>Skype : @Model.Skype</p>
+                        <p>Phone : @Model.Phone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

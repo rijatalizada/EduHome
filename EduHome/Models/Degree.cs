@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,4 +11,5 @@ public class Degree
     [Column("Degree")]
     public string Name { get; set; }
     public List<Teacher> Teachers { get; set; }
+   
 }

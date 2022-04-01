@@ -19,5 +19,6 @@ public class Event
     public string About { get; set; }
 
     public List<EventCategory> EventCategories { get; set; }
-    
+    public List<Comment> Comments { get; set; }
+
 }

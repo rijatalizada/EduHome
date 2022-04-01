@@ -1,6 +1,7 @@
 using EduHome.DAL;
 using EduHome.Models;
 using EduHome.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -45,25 +46,30 @@ public class CourseController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Authorize]
     public async Task<IActionResult> AddComment(int id, CourseDetailVM model)
     {
         var course = await _context.Courses.Include(c => c.CourseCategories).ThenInclude(cc => cc.Category)
             .Include(c => c.CourseLanguages).ThenInclude(cl => cl.Language).Include(c => c.Assessment)
             .Include(c => c.SkillLevel).FirstOrDefaultAsync(c => c.Id == id);
         if (course == null) return NotFound();
-
-      
+        model.Course = course;
+        if (!ModelState.IsValid) return View(nameof(Detail), model);       
 
         var comment = new Comment
         {
+            Subject = model.Comment.Subject,
             Description = model.Comment.Description,
             UserId = _userManager.GetUserId(User),
             CourseId = id,
+            BlogId = null,
+            EventId = null,
+            
         };
         
-        _context.Comments.Add(comment); 
+        await _context.Comments.AddAsync(comment); 
         await _context.SaveChangesAsync();
-        return RedirectToAction(nameof(Detail), new { id });
+         return RedirectToAction(nameof(Detail), new { id });
     }
     
     

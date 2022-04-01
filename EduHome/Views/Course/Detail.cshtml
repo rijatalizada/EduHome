@@ -74,6 +74,7 @@
                                     <h3 class="red">course fee $@Model.Course.Fee</h3>
                                 </div>
                             </div>    
+                            @if(User.Identity.IsAuthenticated){
                             <div class="reply-area">
                                 <h3>LEAVE A REPLY</h3>
                                 <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut<br> the is lder of human happinescias unde omnis iste natus error sit volptatem </p>
@@ -99,6 +100,12 @@
                                     <button type="submit" class="reply-btn">send message</button>
                                 </form>
                             </div>
+                            }
+                            else
+                            {
+                                <h3>REGISTER TO LEAVE A REPLY</h3>
+                            }
+                            
                         </div>
                     </div>
                     <div class="col-lg-4">

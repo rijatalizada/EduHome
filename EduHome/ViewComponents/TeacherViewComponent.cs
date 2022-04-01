@@ -14,10 +14,11 @@ public class TeacherViewComponent : ViewComponent
         _context = context;
     }
 
-    public async Task<IViewComponentResult> InvokeAsync(int count)
+    public async Task<IViewComponentResult> InvokeAsync(int count = 1000)
     {
         
-        List<Teacher> teacher = await _context.Teachers.Take(count).ToListAsync();
-        return View(teacher);
+        List<Teacher> teachers = await _context.Teachers.Take(count).ToListAsync();
+        
+        return View(teachers);
     }
 }

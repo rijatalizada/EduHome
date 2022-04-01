@@ -1,0 +1,72 @@
+@model Course
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <a asp-action="Index" class="btn btn-primary mb-2 tex-white">Back</a>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@Model.Name </h3>
+                        
+
+                        <p>About: <span>@Model.About</span></p>
+                        
+                        <p>
+                            Description: @Model.Description
+                        </p>
+
+                        <p>
+                            Assessment: @Model.Assessment.Name
+                        </p>
+                        
+                        <p>Certification: @Model.Certification</p>
+
+                        <p>Duration: @Model.Duration</p>
+                        
+                        <p>Class Duration: @Model.ClassDuration</p>
+                        
+                        <p>Fee: @Model.Fee</p>
+            
+                        <p>HowToApply: @Model.HowToApply</p>
+                        
+                        <p>Start Date: @Model.StartDate.ToString("dd, MMM yyyy")</p>
+                        
+
+
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Related Categories:</h4>
+                        <ul>
+                            @foreach (var category in Model.CourseCategories)
+                            {
+                                <li>@category.Category.Name</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Languages:</h4>
+                        <ul>
+                            @foreach (var language in Model.CourseLanguages)
+                            {
+                                <li>@language.Language.Name</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Image:</h4>
+                            <img src="~/assets/img/course/@Model.Image" alt="@Model.Name" class="img-fluid"/>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

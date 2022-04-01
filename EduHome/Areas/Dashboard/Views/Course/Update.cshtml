@@ -1,0 +1,132 @@
+@model CoursePostVM
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Update Course</h4>
+                        <form class="forms-sample" method="post" asp-controller="Course" asp-action="Update" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Course Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Name">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea asp-for="Description" class="form-control" placeholder="Description"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>About</label>
+                                <textarea asp-for="About" class="form-control" placeholder="About"></textarea>
+                                <span asp-validation-for="About" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>HowToApply</label>
+                                <textarea asp-for="HowToApply" class="form-control" placeholder="Hobbies"></textarea>
+                                <span asp-validation-for="HowToApply" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Certification</label>
+                                <textarea asp-for="Certification" class="form-control" placeholder="Certification"></textarea>
+                                <span asp-validation-for="Certification" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>StartDate</label>
+                                <input asp-for="StartDate" class="form-control" placeholder="StartDate"/>
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <input asp-for="Duration" class="form-control" placeholder="Duration"/>
+                                <span asp-validation-for="Duration" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>ClassDuration</label>
+                                <input asp-for="ClassDuration" class="form-control" placeholder="ClassDuration"/>
+                                <span asp-validation-for="ClassDuration" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Fee</label>
+                                <input asp-for="Fee" class="form-control" placeholder="Fee"/>
+                                <span asp-validation-for="Fee" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Students</label>
+                                <input asp-for="Students" class="form-control" placeholder="Students"/>
+                                <span asp-validation-for="Students" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Assessments</label>
+                                <select class="form-control" asp-for="AssessmentId">
+                                    @foreach (var assessment in Model.Assessments)
+                                    {
+                                        <option value="@assessment.Id">@assessment.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="AssessmentId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>SkillLevel</label>
+                                <select class="form-control" asp-for="SkillLevelId">
+                                    @foreach (var skillLevel in Model.SkillLevels)
+                                    {
+                                        <option value="@skillLevel.Id">@skillLevel.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="SkillLevelId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Categories</label>
+                                <select class="form-control" asp-for="CategoryIds">
+                                    @foreach (var degree in Model.Categories)
+                                    {
+                                        <option value="@degree.Id">@degree.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Languages</label>
+                                <select class="form-control" asp-for="LanguageIds">
+                                    @foreach (var language in Model.Languages)
+                                    {
+                                        <option value="@language.Id">@language.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="LanguageIds" class="text-danger"></span>
+                            </div>`
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image"/>
+                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light" asp-controller="Course" asp-action="Index">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#CategoryIds').select2();
+        });
+        $(document).ready(function() {
+                    $('#LanguageIds').select2();
+                });
+    </script>
+}

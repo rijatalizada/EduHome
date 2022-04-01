@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Blog/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0Jsb2cvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Blog/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0Jsb2cvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Blog/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0Jsb2cvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0Jsb2cvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Blog/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0Jsb2cvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NhdGVnb3J5L0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +53,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NhdGVnb3J5L1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Course/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NvdXJzZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Course/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NvdXJzZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Course/DetailAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NvdXJzZS9EZXRhaWxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NvdXJzZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Course/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0NvdXJzZS9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Event/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0V2ZW50L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Event/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0V2ZW50L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Event/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0V2ZW50L0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Event/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0V2ZW50L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Event/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL0V2ZW50L1VwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Home/Index.cshtml]
@@ -85,6 +145,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1NoYXJlZC9fTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Teacher/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1RlYWNoZXIvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Teacher/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1RlYWNoZXIvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Teacher/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1RlYWNoZXIvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Teacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1RlYWNoZXIvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Teacher/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRGFzaGJvYXJkL1ZpZXdzL1RlYWNoZXIvVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ricatalizade/Desktop/EduHomeBackEnd/EduHome/Areas/Dashboard/Views/Testimonial/Create.cshtml]

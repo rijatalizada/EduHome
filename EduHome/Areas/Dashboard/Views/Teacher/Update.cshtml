@@ -1,0 +1,129 @@
+@model TeacherPostVm
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Update Teacher</h4>
+                        <form class="forms-sample" method="post" asp-controller="Teacher" asp-action="Update" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Teacher Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Name">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Academic Rank</label>
+                                <input asp-for="AcademicRanking" class="form-control" placeholder="AcademicRanking"/>
+                                <span asp-validation-for="AcademicRanking" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>About </label>
+                                <textarea asp-for="About" class="form-control" placeholder="About"></textarea>
+                                <span asp-validation-for="About" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Hobbies</label>
+                                <input asp-for="Hobbies" class="form-control" placeholder="Hobbies"/>
+                                <span asp-validation-for="Hobbies" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Mail</label>
+                                <input asp-for="Mail" class="form-control" placeholder="Mail"/>
+                                <span asp-validation-for="Mail" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Skype</label>
+                                <input asp-for="Skype" class="form-control" placeholder="Skype"/>
+                                <span asp-validation-for="Skype" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input asp-for="Phone" class="form-control" placeholder="Phone"/>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Degree</label>
+                                <select class="form-control" asp-for="DegreeId">
+                                    @foreach (var degree in Model.Degrees)
+                                    {
+                                        <option value="@degree.Id">@degree.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="DegreeId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Experience in years</label>
+                                <input asp-for="Experience" class="form-control" placeholder="Experience"/>
+                                <span asp-validation-for="Experience" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Categories</label>
+                                <select class="form-control" asp-for="CategoryIds">
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <option value="@category.Id">@category.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Communication in %</label>
+                                <input asp-for="Skills.Communication" class="form-control" placeholder="Communication"/>
+                                <span asp-validation-for="Skills.Communication" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Design in %</label>
+                                <input asp-for="Skills.Design" class="form-control" placeholder="Design"/>
+                                <span asp-validation-for="Skills.Design" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Development in %</label>
+                                <input asp-for="Skills.Development" class="form-control" placeholder="Development"/>
+                                <span asp-validation-for="Skills.Development" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Innovation in %</label>
+                                <input asp-for="Skills.Innovation" class="form-control" placeholder="Innovation"/>
+                                <span asp-validation-for="Skills.Innovation" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Language in %</label>
+                                <input asp-for="Skills.Language" class="form-control" placeholder="Language"/>
+                                <span asp-validation-for="Skills.Language" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>TeamLeader in %</label>
+                                <input asp-for="Skills.TeamLeader" class="form-control" placeholder="TeamLeader"/>
+                                <span asp-validation-for="Skills.TeamLeader" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image"/>
+                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light" asp-controller="Teacher" asp-action="Index">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#CategoryIds').select2();
+        });
+    </script>
+}

@@ -36,7 +36,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Assessments");
+                    b.ToTable("Assessments", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Blog", b =>
@@ -70,7 +70,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.BlogCategory", b =>
@@ -93,7 +93,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("BlogCategories");
+                    b.ToTable("BlogCategories", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Category", b =>
@@ -114,7 +114,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Comment", b =>
@@ -125,10 +125,10 @@ namespace EduHome.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("BlogId")
+                    b.Property<int?>("BlogId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CourseId")
+                    b.Property<int?>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Created")
@@ -141,7 +141,7 @@ namespace EduHome.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EventId")
+                    b.Property<int?>("EventId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
@@ -152,7 +152,6 @@ namespace EduHome.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -165,7 +164,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Course", b =>
@@ -230,7 +229,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("SkillLevelId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.CourseCategory", b =>
@@ -253,7 +252,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("CourseCategories");
+                    b.ToTable("CourseCategories", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.CourseLanguage", b =>
@@ -276,7 +275,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("CourseLanguages");
+                    b.ToTable("CourseLanguages", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Degree", b =>
@@ -294,7 +293,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Degrees");
+                    b.ToTable("Degrees", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Event", b =>
@@ -331,7 +330,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Events");
+                    b.ToTable("Events", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.EventCategory", b =>
@@ -354,7 +353,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("EventCategories");
+                    b.ToTable("EventCategories", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.HeaderSlider", b =>
@@ -387,7 +386,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HeaderSliders");
+                    b.ToTable("HeaderSliders", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.HomeNoticePage", b =>
@@ -407,7 +406,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HomeNoticePages");
+                    b.ToTable("HomeNoticePages", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Language", b =>
@@ -424,7 +423,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.SkillLevel", b =>
@@ -441,7 +440,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SkillLevels");
+                    b.ToTable("SkillLevels", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Teacher", b =>
@@ -496,7 +495,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("DegreeId");
 
-                    b.ToTable("Teachers");
+                    b.ToTable("Teachers", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.TeacherCategory", b =>
@@ -519,7 +518,7 @@ namespace EduHome.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("TeacherCategories");
+                    b.ToTable("TeacherCategories", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.TeacherSkills", b =>
@@ -556,7 +555,7 @@ namespace EduHome.Migrations
                     b.HasIndex("TeacherId")
                         .IsUnique();
 
-                    b.ToTable("TeacherSkills");
+                    b.ToTable("TeacherSkills", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.Testimonial", b =>
@@ -596,7 +595,7 @@ namespace EduHome.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Testimonials");
+                    b.ToTable("Testimonials", (string)null);
                 });
 
             modelBuilder.Entity("EduHome.Models.User", b =>
@@ -834,27 +833,19 @@ namespace EduHome.Migrations
                 {
                     b.HasOne("EduHome.Models.Blog", "Blog")
                         .WithMany("Comments")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BlogId");
 
                     b.HasOne("EduHome.Models.Course", "Course")
                         .WithMany("Comments")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourseId");
 
                     b.HasOne("EduHome.Models.Event", "Event")
-                        .WithMany()
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Comments")
+                        .HasForeignKey("EventId");
 
                     b.HasOne("EduHome.Models.User", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Blog");
 
@@ -1070,6 +1061,8 @@ namespace EduHome.Migrations
 
             modelBuilder.Entity("EduHome.Models.Event", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("EventCategories");
                 });
 

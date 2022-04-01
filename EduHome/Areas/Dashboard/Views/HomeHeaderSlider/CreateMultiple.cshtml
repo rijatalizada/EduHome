@@ -43,23 +43,3 @@
     </div>
 </div>
 
-@section Scripts{
-    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#Description'))
-            .catch(error => {
-                console.error(error);
-            });
-        ClassicEditor
-                    .create(document.querySelector('#Title'))
-                    .catch(error => {
-                        console.error(error);
-               });
-        ClassicEditor
-                    .create(document.querySelector('#TitleH2'))
-                    .catch(error => {
-                        console.error(error);
-                    });
-    </script>
-}

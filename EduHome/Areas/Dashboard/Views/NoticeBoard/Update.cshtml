@@ -11,7 +11,7 @@
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Create new Category</h4>
+                        <h4 class="card-title">Update Notice Post</h4>
                         <form class="forms-sample" method="post" asp-controller="NoticeBoard" asp-action="Update">
                             <div class="form-group">
                                 <label>Description</label>
@@ -28,13 +28,3 @@
     </div>
 </div>
 
-@section Scripts{
-    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#Description'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-}

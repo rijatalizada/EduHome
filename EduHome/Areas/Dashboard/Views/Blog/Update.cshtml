@@ -1,0 +1,69 @@
+@model BlogPostVm
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Update Blog</h4>
+                        <form class="forms-sample" method="post" asp-controller="Blog" asp-action="Update" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Name">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>About </label>
+                                <textarea asp-for="About" class="form-control" placeholder="About"></textarea>
+                                <span asp-validation-for="About" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input asp-for="Date" class="form-control" placeholder="Date"/>
+                                <span asp-validation-for="Date" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Author</label>
+                                <input asp-for="Author" class="form-control" placeholder="Author"/>
+                                <span asp-validation-for="Author" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>ImageFile</label>
+                                <input asp-for="ImageFile" class="form-control" placeholder="ImageFile"/>
+                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Categories</label>
+                                <select class="form-control" asp-for="CategoryIds">
+                                    @foreach (var degree in Model.Categories)
+                                    {
+                                        <option value="@degree.Id">@degree.Name</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light" asp-controller="Blog" asp-action="Index">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#CategoryIds').select2();
+        });
+    </script>
+}
